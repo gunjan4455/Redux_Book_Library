@@ -1,6 +1,6 @@
 import {getBookByIdAsync, editBookByIdAsync, isSuccess} from '../actions';
 import { connect } from 'react-redux';
-import LibraryDetail from '../components/LibraryDetail';
+import DetailComponent from '../components/Detail';
 
 const mapStateToProps = ({state}) => {
     return {
@@ -16,6 +16,6 @@ const mapDispatchToProps = dispatch => ({
     isSuccessAction: () => dispatch(isSuccess(false))
 });
 
-const Detail = connect(mapStateToProps, mapDispatchToProps)(LibraryDetail);
+const Detail = connect(mapStateToProps, mapDispatchToProps)(DetailComponent);
 export default Detail;
 

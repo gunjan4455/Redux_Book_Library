@@ -10,10 +10,11 @@ class LibrarySearch extends React.Component {
         super(props);
         this.filterBooks = this.filterBooks.bind(this);
         this.reset = this.reset.bind(this);
+        console.log("heree==")
     }
 
     componentDidMount() {
-        if (!this.props.books.length)
+        //if (!this.props.books.length)
             this.props.getFilteredBooks(this.props.match.params.book);
     }
 
@@ -27,11 +28,10 @@ class LibrarySearch extends React.Component {
 
     renderBook(item, index) {
         return (
-            <div className="col-md-3" key={index}>
-                <Link to={`/details/${item.id}`}><Book book={item} id={index} key={index}/></Link>
-            </div>
+            <Book book={item} key={index} index={index}/>
         )
     }
+
     reset() {
         this.props.getBooksAsync();
     }

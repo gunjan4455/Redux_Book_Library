@@ -6,6 +6,8 @@ import createSagaMiddleware from 'redux-saga';
 import {default as rootReducer} from "./reducers";
 import rootSaga from "./sagas";
 import App from './App.js';
+import  'styles/bootstrap.css';
+import  'styles/style.css';
 
 const sagaMiddleware = createSagaMiddleware();
 const reducers = combineReducers({ state : rootReducer});

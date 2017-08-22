@@ -69,11 +69,11 @@ export function* watchGetBookById() {
 }
 
 export function* watchFilteredBooks() {
-    yield takeEvery('GET_FILTERED_BOOKS_ASYNC', getFilteredBooks)
+    yield takeEvery(types.GET_FILTERED_BOOKS_ASYNC, getFilteredBooks)
 }
 
 export function* watchEditBook() {
-    yield takeEvery('EDIT_BOOK_ASYNC', editBookByIdAsync)
+    yield takeEvery(types.EDIT_BOOK_ASYNC, editBookByIdAsync)
 }
 
 export default function* rootSaga() {
