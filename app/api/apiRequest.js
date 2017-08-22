@@ -18,5 +18,4 @@ export default function call({
     return fetch(_url, fetchData).then(function(response) {
         return response.json();
     });
-
 }

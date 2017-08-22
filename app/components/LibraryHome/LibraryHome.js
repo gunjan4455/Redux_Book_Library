@@ -1,5 +1,4 @@
 import React from "react";
-import InfiniteScroll from 'react-infinite-scroll-component';
 import Book from '../shared/Book';
 import {Link} from 'react-router-dom';
 

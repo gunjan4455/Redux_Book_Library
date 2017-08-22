@@ -1,9 +1,8 @@
 import React from "react";
-import {Link} from 'react-router-dom'
 import DetailModal from "../shared/DetailModal";
 import ConfirmationModal from "../shared/ConfirmationModal";
-import config from "../../config";
-const {API: {protocols, domain, imagePath}} = config;
+import BackButton from '../shared/BackButton';
+import BookCover from '../shared/BookCover';
 
 class LibraryDetail extends React.Component {
     constructor(props) {
@@ -53,23 +52,11 @@ class LibraryDetail extends React.Component {
         return (
             <section className="container bg-gray">
                 <div className="row">
-                    <Link to='/'>
-                        <div>
-                            <img src={`${protocols.HTTP}${domain.BOOKS_CONNECT_LOCAL}${imagePath}back_button.jpg`}
-                                 className="back-button"/>
-                        </div>
-                    </Link>
-
-                    <div className="col-md-4">
-                        <div className="thumbnail">
-                            <img className="cover"
-                                 src={`${protocols.HTTP}${domain.BOOKS_CONNECT_LOCAL}${imagePath}${book.imageUrl}`}/>
-                        </div>
-                    </div>
+                    <BackButton/>
+                    <BookCover image={book.imageUrl}/>
                     <div className="col-md-6 detail-mid-box">
                         <h3>{book.title}</h3>
                         <h5>By {book.author}</h5>
-
                         <p>{book.description}</p>
                     </div>
                     <div className="col-md-2">

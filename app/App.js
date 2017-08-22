@@ -13,7 +13,7 @@ const App = () => (
             <Switch>
                 <Redirect exact from='/' to='/home'/>
                 <Route path='/home' component={Home}/>
-                <Route path='/search/:book' component={Search}/>
+                <Route path='/search/:book?' component={Search}/>
                 <Route path='/details/:id' component={Detail}/>
                 <Route path='/404' component={NotFound}/>
                 <Redirect from='*' to='/404'/>
