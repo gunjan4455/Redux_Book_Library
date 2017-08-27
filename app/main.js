@@ -11,7 +11,7 @@ import App from './App.js';
 import 'styles/bootstrap.css';
 import 'styles/style.css';
 
-const logger = createLogger({
+const logger = createLogger({ls
     predicate: (getState, action) => !isProd()
 });
 
